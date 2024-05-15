@@ -72,9 +72,7 @@ class AccountsWidget {
    * в боковой колонке
    * */
   clear() {
-    const accountList = document.querySelectorAll(
-      "ul.accounts-panel > li.account"
-    );
+    const accountList = document.querySelectorAll(".account");
 
     accountList.forEach((account) => account.remove());
   }
@@ -87,9 +85,9 @@ class AccountsWidget {
    * Вызывает App.showPage( 'transactions', { account_id: id_счёта });
    * */
   onSelectAccount(element) {
-    const selectedAcc = document.querySelector("li.active");
-    if (selectedAcc) {
-      selectedAcc.classList.remove("active");
+    const selectedAccount = document.querySelector("li.active");
+    if (selectedAccount) {
+      selectedAccount.classList.remove("active");
     }
     element.classList.add("active");
     App.showPage("transactions", {
@@ -119,7 +117,7 @@ class AccountsWidget {
    * */
   renderItem(data) {
     const accountListMenu = document.querySelector(".accounts-panel");
-    
+
     data.forEach((item) =>
       accountListMenu.insertAdjacentHTML("beforeend", this.getAccountHTML(item))
     );

@@ -5,6 +5,12 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "name": "demo2",
+      "email": "demo2@demo2",
+      "password": "demo2",
+      "id": "7bntv5jcwlw7l2kbp"
     }
   ],
   "accounts": [
@@ -22,6 +28,16 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "sdf",
+      "user_id": "7bntv5jcwlw7l2kbp",
+      "id": "7bntv5ay4lw7l2t9d"
+    },
+    {
+      "name": "sadfgfg",
+      "user_id": "7bntv5jcwlw7l2kbp",
+      "id": "7bntv5ggklw7l6tph"
     }
   ],
   "transactions": [
@@ -159,6 +175,15 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "7bntv5flclw7l32ld",
+      "type": "expense",
+      "name": "sadf",
+      "sum": 3432,
+      "account_id": "7bntv5ay4lw7l2t9d",
+      "user_id": "7bntv5jcwlw7l2kbp",
+      "created_at": "2024-05-15T08:52:39.264Z"
     }
   ]
 }

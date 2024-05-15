@@ -43,18 +43,16 @@ class CreateTransactionForm extends AsyncForm {
   onSubmit(data) {
     Transaction.create(data, (err, response) => {
       if (response && response.success) {
-        let formName;
-        switch (data.type) {
-          case "expense":
-            formName = "newExpense";
-            break;
-          case "income":
-            formName = "newIncome";
-            break;
+        if (this.element.id === "new-income-form") {
+          App.getModal("newIncome").close();
+          App.getModal("newIncome").element.querySelector("form").reset();
+        } else {
+          App.getModal("newExpense").close();
+          App.getModal("newExpense").element.querySelector("form").reset();
         }
-        document.forms[`new-${data.type}-form`].reset();
-        App.getModal(formName).close();
         App.update();
+      } else {
+        alert(err);
       }
     });
   }
